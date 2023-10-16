@@ -27,6 +27,9 @@ dependencies {
   implementation libs.composeUi.uiTooling
 
   testImplementation libs.testParameterInjector
+
+  testImplementation("com.lemonappdev:konsist:0.13.0")
+
 }
 
 // https://github.com/diffplug/spotless/issues/1572
