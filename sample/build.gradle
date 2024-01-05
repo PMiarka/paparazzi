@@ -23,12 +23,17 @@ android {
 }
 
 dependencies {
+  api libs.guava
+
   implementation libs.composeUi.material
   implementation libs.composeUi.uiTooling
 
   testImplementation libs.testParameterInjector
+  // to reproduce java.lang.NoSuchMethodError (ImmutableMap)
+  // uncomment the line (testImplementation libs.test.coroutines) and run ComposeA11yTest
+  //  testImplementation libs.test.coroutines
 
-  testImplementation("com.lemonappdev:konsist:0.13.0")
+  testImplementation "com.lemonappdev:konsist:0.13.0"
 
 }
 
